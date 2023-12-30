@@ -8,5 +8,8 @@ export default function useOutsideClick(ref,exceptionId ,cb){
             }
         };
         document.addEventListener("mousedown", handleOutsideClick);
+        return()=>{
+            document.removeEventListener('mousedown',handleOutsideClick);
+        };
     },[ref,cb])
 }
