@@ -1,11 +1,14 @@
 import { Outlet } from "react-router-dom"
-import Header from "./Header/Header"
 
 function AppLayout() {
   return (
-    <div>
-        <Header/>
+    <div className="appLayout">
+      <div className="sidebar">
         <Outlet/>
+      </div>
+      <div className="mapContainer">
+        map
+      </div>
     </div>
   )
 }

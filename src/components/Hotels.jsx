@@ -16,11 +16,7 @@ function Hotels() {
 
   return (
     <div>
-      <div className="sidebar">
-        {data.length}
-        <Outlet />
-      </div>
-      <div className="map">map</div>
+      {data.length}
     </div>
   );
 }

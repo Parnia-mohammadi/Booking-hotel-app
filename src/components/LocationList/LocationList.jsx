@@ -8,6 +8,7 @@ function LocationList() {
   return (
     <div className="nearbyLocation">
       <p>nearby Locations</p>
+      <br/>
       <div className="locationList">
         {data.map((item) => {
           return (
