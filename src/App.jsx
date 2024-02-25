@@ -8,10 +8,11 @@ import Hotels from "./components/Hotels";
 // import HotelsList from "./components/HotelsList";
 import SingleHotel from "./components/SingleHotel";
 import Header from "./components/Header/Header";
+import HotelsProvider from "./context/HotelsProvider";
 
 function App() {
   return (
-    <div>
+    <HotelsProvider>
       <Toaster />
       <Header/>
       <Routes>
@@ -21,7 +22,7 @@ function App() {
             <Route path=":id" element={<SingleHotel />} />
           </Route>
       </Routes>
-    </div>
+    </HotelsProvider>
   );
 }
 
