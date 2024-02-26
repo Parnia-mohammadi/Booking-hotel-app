@@ -1,7 +1,7 @@
 
 function SingleHotel() {
   return (
-    <div>SingleHotel</div>
+    <div classsName="searchList">SingleHotel</div>
   )
 }
 
