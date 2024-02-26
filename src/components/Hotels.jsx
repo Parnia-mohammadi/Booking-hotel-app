@@ -3,20 +3,19 @@ import Loading from "./LocationList/Loading";
 import { UseHotels } from "../context/HotelsProvider";
 
 function Hotels() {
-  const { isLoading, data } = UseHotels();
-  // console.log(isLoading, data);
+  const { isLoading, hotels } = UseHotels();
+  // console.log(isLoading, hotels);
   if (isLoading) <Loading />;
 
   return (
     <div classsName="searchList">
-      <h2>search Reasult ({data.length})</h2>
+      <h2>search Reasult ({hotels.length})</h2>
       <br />
-      {data.map((item) => {
+      {hotels.map((item) => {
         return (
           <Link
             key={item.id}
-            to={`hotels/${item.id}?lat=${item.latitude}&
-         lng=${item.longitude}`}
+            to={`${item.id}?lat=${item.latitude}&lng=${item.longitude}`}
           >
             <div className="searchItem">
               <img src={item.picture_url.url} alt={item.name} />
