@@ -1,2 +1,3 @@
 In this application, I use state, props, context, global state, react-router-dom, fetching data, nested routes, search params, query strings. also I use a data base and back end files.
-I also added leaflet package to show locations in a map. It needs some presets in index.html. By using some components from this library, it shows all the places. and by clicking one of the hotels, the center of the map will change.
+I also added leaflet package to show locations in a map. It needs some pre sets in index.html. By using some components from this library, it shows all the places. and by clicking one of the hotels, the center of the map will change.
+I also added navigator.geolocation in a custom hook which get the user location and by using a useEffect in Map component and clicking a button in map, the center of the map will change.
