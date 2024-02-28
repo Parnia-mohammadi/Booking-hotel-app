@@ -5,11 +5,11 @@ function AppLayout() {
   return (
     <div className="appLayout">
       <div className="sidebar">
-        <Outlet/>
+        <Outlet />
       </div>
       <Map />
     </div>
-  )
+  );
 }
 
-export default AppLayout
+export default AppLayout;
