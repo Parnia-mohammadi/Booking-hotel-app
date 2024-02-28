@@ -205,21 +205,37 @@
   height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .map {
+  height: 50%;
+  width: 100%;
+  }
+}
+
+/* hotels */
+
 .searchList {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.searchList .searchItem {
+.searchItem {
   display: flex;
   gap: 1rem;
+  margin-bottom: 0.7rem;
 }
-.searchList .searchItem img {
+.searchItem img {
   width: 6rem;
   height: 6rem;
   object-fit: cover;
   border-radius: 1rem;
+}
+.searchItem .searchItemDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
 }
 .searchItem .searchItemDesc p {
   margin-bottom: 0.3rem;
@@ -252,7 +268,8 @@
 }
 
 .sidebar {
-  width: 35%;
+  width: 100%;
+  height: 50%;
   overflow-y: scroll;
   padding-right: 1rem;
 }
@@ -265,9 +282,21 @@
 @media screen and (min-width: 768px) {
   .sidebar {
     width: 50%;
+    height: 100%;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .appLayout {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    height: calc(100vh - 130px);
+    /* background-color: var(--text-100); */
+    align-items: center;
+  }
+}
 /* bookmark page */
 .bookmarkList {
   margin-top: 1rem;
