@@ -1,8 +1,26 @@
+import { useEffect } from "react";
+import { UseHotels } from "../context/HotelsProvider";
+import Loading from "./LocationList/Loading";
+import { useParams } from "react-router-dom";
 
 function SingleHotel() {
+  const { isLoadingCurrentHotel, currentHotel: data, getHotel } = UseHotels();
+  const { id } = useParams();
+  useEffect(() => {
+    getHotel(id);
+  }, [id]);
+  if (isLoadingCurrentHotel || !data) return <Loading />;
   return (
-    <div classsName="searchList">SingleHotel</div>
-  )
+    <div classsName="room">
+      <div className="roomDetail">
+        <h2>{data.name}</h2>
+        <div>
+          {data.number_of_reviews} reviews &bull; {data.smart_location}
+        </div>
+        <img src={data.picture_url.url} alt={data.name} />
+      </div>
+    </div>
+  );
 }
 
-export default SingleHotel
+export default SingleHotel;
