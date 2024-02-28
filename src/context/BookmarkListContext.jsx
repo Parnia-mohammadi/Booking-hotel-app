@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -8,12 +7,9 @@ import Loading from "../components/LocationList/Loading";
 const Base_url = "http://localhost:5000";
 const BookmarkListContext = createContext();
 export default function BookmarkListContextProvider({ children }) {
-  const [currentBookmark, setCurrentBookmark] = useState(null);
+  const [currentBookmark, setCurrentBookmark] = useState({});
   const [isLoadingCurrentBookmark, setIsLoadingCurrentBookmark] =
     useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
   const { data: bookmarks, isLoading } = useFetch(`${Base_url}/bookmarks`);
   async function getBookmark(id) {
     setIsLoadingCurrentBookmark(true);
@@ -44,6 +40,6 @@ export default function BookmarkListContextProvider({ children }) {
     </BookmarkListContext.Provider>
   );
 }
-function UseBookmarks() {
+export function UseBookmarks() {
   return useContext(BookmarkListContext);
 }
