@@ -46,8 +46,8 @@ function Map({ markerLocations }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <DetectClick />
       <ChangeCenter position={mapCenter} />
+      <DetectClick />
       {markerLocations.map((item) => {
         return (
           <Marker key={item.id} position={[item.latitude, item.longitude]}>

@@ -14,18 +14,16 @@ export default function BookmarkListContextProvider({ children }) {
   async function getBookmark(id) {
     setIsLoadingCurrentBookmark(true);
     try {
-      const { data, isLoading } = await axios.get(
+      const { data } = await axios.get(
         `${Base_url}/bookmarks/${id}`
       );
       setCurrentBookmark(data);
-      setIsLoadingCurrentBookmark(isLoading);
     } catch (error) {
       toast.error(error.message);
     } finally {
       setIsLoadingCurrentBookmark(false);
     }
   }
-  if (isLoading) return <Loading />;
   return (
     <BookmarkListContext.Provider
       value={{
