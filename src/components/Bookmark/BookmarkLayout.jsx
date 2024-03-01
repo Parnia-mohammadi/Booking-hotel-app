@@ -6,7 +6,9 @@ function BookmarkLayout() {
   const { bookmarks } = UseBookmarks();
   return (
     <div className="appLayout">
-      <div className="sidebar">{Outlet}</div>
+      <div className="sidebar">
+        <Outlet />
+      </div>
       <Map markerLocations={bookmarks} />
     </div>
   );
