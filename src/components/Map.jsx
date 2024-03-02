@@ -8,9 +8,9 @@ import {
 } from "react-leaflet";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Loading from "./LocationList/Loading";
 import "leaflet/dist/leaflet.css";
 import useGeoLocation from "../hooks/useGeoLocation";
+import useUrlLocation from "../hooks/useUrlLocation";
 
 function Map({ markerLocations }) {
   const {
@@ -20,9 +20,7 @@ function Map({ markerLocations }) {
   } = useGeoLocation();
   // console.log(hotels);
   const [mapCenter, setMapCenter] = useState([48.56, 2.35]);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
+  const [lat, lng] = useUrlLocation();
   useEffect(() => {
     if (lat && lng) {
       setMapCenter([lat, lng]);
@@ -71,7 +69,7 @@ function DetectClick() {
   const navigate = useNavigate();
   useMapEvent({
     click: (e) =>
-      navigate(`/bookmarks/add?lat=${e.latlng?.lat}& lng=${e.latlng?.lng}`),
+      navigate(`/bookmarks/add?lat=${e.latlng?.lat}&lng=${e.latlng?.lng}`),
   });
   return null;
 }
