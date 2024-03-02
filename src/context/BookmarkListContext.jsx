@@ -33,6 +33,17 @@ export default function BookmarkListContextProvider({ children }) {
       setIsLoading(false);
     }
   }
+  async function deleteBookmark(id) {
+    setIsLoading(true);
+    try {
+      await axios.delete(`${Base_url}/bookmarks/${id}`);
+      setBookmarks(bookmarks.filter((item) => item.id != id));
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setIsLoading(false);
+    }
+  }
   useEffect(() => {
     async function fetchBookmarkList() {
       setIsLoading(true);
@@ -55,6 +66,7 @@ export default function BookmarkListContextProvider({ children }) {
         currentBookmark,
         getBookmark,
         createBookmark,
+        deleteBookmark,
       }}
     >
       {children}

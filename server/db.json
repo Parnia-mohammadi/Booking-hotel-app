@@ -1325,93 +1325,57 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Abalessa",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "23.18455079512732",
-      "longitude": "3.795523257510883",
-      "host_location": "Abalessa Algeria",
+      "cityName": "Tehran",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "35.66399091134812",
+      "longitude": "51.4599609375",
+      "host_location": "TehranIran (Islamic Republic of)",
       "id": 1
     },
     {
-      "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.32869425037187",
-      "longitude": "46.724183117022086",
-      "host_location": "Mahidasht Iran (Islamic Republic of Iran)",
-      "id": 4
-    },
-    {
-      "cityName": "Sanandaj",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "35.31372444726279",
-      "longitude": "47.03114358752335",
-      "host_location": "Sanandaj Iran (Islamic Republic of)",
-      "id": 5
-    },
-    {
-      "cityName": "A Dakhla Oasis",
-      "country": "Egypt",
-      "countryCode": "EG",
-      "latitude": "25.02090651422749",
-      "longitude": "29.09059588509316",
-      "host_location": "A Dakhla Oasis Egypt",
+      "cityName": "Berlin",
+      "country": "Germany",
+      "countryCode": "DE",
+      "latitude": "52.466050361889515",
+      "longitude": "13.491210937500002",
+      "host_location": "BerlinGermany",
       "id": 7
     },
     {
-      "cityName": "Baba Kot",
-      "country": "Pakistan",
-      "countryCode": "PK",
-      "latitude": "28.43528783183169",
-      "longitude": "67.78003711374224",
-      "host_location": "Baba Kot Pakistan",
+      "cityName": "Paris",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "48.817715668996435",
+      "longitude": "2.4609375000000004",
+      "host_location": "ParisFrance",
       "id": 8
     },
     {
-      "cityName": "Rasht",
+      "cityName": "Isfahan",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
-      "latitude": "37.26858864497057",
-      "longitude": "49.59228515625",
-      "host_location": "RashtIran (Islamic Republic of)",
+      "latitude": "32.66925620198745",
+      "longitude": "51.66355133056641",
+      "host_location": "IsfahanIran (Islamic Republic of)",
       "id": 9
     },
     {
       "cityName": "Karaj",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
-      "latitude": "35.792753726181935",
-      "longitude": "51.01501464843751",
+      "latitude": "35.80575429369931",
+      "longitude": "50.90309143066407",
       "host_location": "KarajIran (Islamic Republic of)",
-      "id": 10
-    },
-    {
-      "cityName": "Tehran",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "35.672358451083014",
-      "longitude": "51.38854980468751",
-      "host_location": "TehranIran (Islamic Republic of)",
-      "id": 11
-    },
-    {
-      "cityName": "Isfahan",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "32.64949300750322",
-      "longitude": "51.70440673828126",
-      "host_location": "IsfahanIran (Islamic Republic of)",
       "id": 12
     },
     {
-      "cityName": "Shiraz",
+      "cityName": "Abadan",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
-      "latitude": "29.567484977970178",
-      "longitude": "52.55859375000001",
-      "host_location": "ShirazIran (Islamic Republic of)",
+      "latitude": "30.341472652403482",
+      "longitude": "48.26843261718751",
+      "host_location": "AbadanIran (Islamic Republic of)",
       "id": 13
     }
   ]
