@@ -49,7 +49,12 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "phone", "facebook", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "facebook",
+        "reviews"
+      ],
       "street": "Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -114,7 +119,9 @@
         "lon": 2.35,
         "lat": 48.86
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "9192415",
@@ -305,7 +312,11 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 3,
       "host_total_listings_count": 3,
-      "host_verifications": ["email", "phone", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews"
+      ],
       "street": "Oud-West, Amsterdam, North Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -374,7 +385,10 @@
         "lon": 4.875639539930118,
         "lat": 52.36456756846072
       },
-      "features": ["Host Has Profile Pic", "Is Location Exact"]
+      "features": [
+        "Host Has Profile Pic",
+        "Is Location Exact"
+      ]
     },
     {
       "id": "13153299",
@@ -695,7 +709,10 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "reviews"],
+      "host_verifications": [
+        "email",
+        "reviews"
+      ],
       "street": "Amsterdam, North Holland, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -765,7 +782,9 @@
         "lon": 4.865594943841575,
         "lat": 52.36667871194905
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "13465532",
@@ -947,7 +966,11 @@
       "host_neighbourhood": null,
       "host_listings_count": 0,
       "host_total_listings_count": 0,
-      "host_verifications": ["email", "phone", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews"
+      ],
       "street": "Amsterdam, NH 1056, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1021,7 +1044,9 @@
         "lon": 4.853345068114508,
         "lat": 52.37080138742488
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "7890890",
@@ -1072,7 +1097,12 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "phone", "reviews", "jumio"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews",
+        "jumio"
+      ],
       "street": "Oud-West, Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1206,7 +1236,12 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 2,
       "host_total_listings_count": 2,
-      "host_verifications": ["email", "phone", "reviews", "jumio"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews",
+        "jumio"
+      ],
       "street": "Oud-West, Amsterdam, Noord-Holland 1057, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1300,7 +1335,7 @@
     },
     {
       "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of Iran)",
+      "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
       "latitude": "34.32869425037187",
       "longitude": "46.724183117022086",
@@ -1333,6 +1368,51 @@
       "longitude": "67.78003711374224",
       "host_location": "Baba Kot Pakistan",
       "id": 8
+    },
+    {
+      "cityName": "Rasht",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "37.26858864497057",
+      "longitude": "49.59228515625",
+      "host_location": "RashtIran (Islamic Republic of)",
+      "id": 9
+    },
+    {
+      "cityName": "Karaj",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "35.792753726181935",
+      "longitude": "51.01501464843751",
+      "host_location": "KarajIran (Islamic Republic of)",
+      "id": 10
+    },
+    {
+      "cityName": "Tehran",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "35.672358451083014",
+      "longitude": "51.38854980468751",
+      "host_location": "TehranIran (Islamic Republic of)",
+      "id": 11
+    },
+    {
+      "cityName": "Isfahan",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "32.64949300750322",
+      "longitude": "51.70440673828126",
+      "host_location": "IsfahanIran (Islamic Republic of)",
+      "id": 12
+    },
+    {
+      "cityName": "Shiraz",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "29.567484977970178",
+      "longitude": "52.55859375000001",
+      "host_location": "ShirazIran (Islamic Republic of)",
+      "id": 13
     }
   ]
 }

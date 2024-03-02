@@ -11,9 +11,9 @@ function Bookmark() {
     <div>
       <h2>Bookmarks List :</h2>
       <div className="bookmarkList">
-        {bookmarks.map((item) => {
+        {bookmarks?.map((item) => {
           return (
-            <Link to={`${item.id}?lat=${item.latitude}&lng=${item.longitude}`}>
+            <Link key={item.id} to={`${item.id}?lat=${item.latitude}&lng=${item.longitude}`}>
               <div className={`bookmarkItem ${currentBookmark?.id==item.id?"current-bookmark":""}`} key={item.id}>
                 <ReactCountryFlag svg countryCode={item.countryCode} />
                 &nbsp;<strong>{item.cityName}</strong>&nbsp;
