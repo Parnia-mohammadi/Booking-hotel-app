@@ -4,6 +4,7 @@ import useUrlLocation from "../../hooks/useUrlLocation";
 import axios from "axios";
 import ReactCountryFlag from "react-country-flag";
 import Loading from "../LocationList/Loading";
+import { UseBookmarks } from "../../context/BookmarkListContext";
 
 const Base_GeoCoding_Url =
   "https://api.bigdatacloud.net/data/reverse-geocode-client";
@@ -11,11 +12,25 @@ const Base_GeoCoding_Url =
 function BookmarkAdd() {
   const [country, setCountry] = useState("");
   const [cityName, setCityName] = useState("");
-  const [countryCode, setCountryCode] =useState("");
+  const [countryCode, setCountryCode] = useState("");
   const [isLoadingGeoCoding, setIsLoadingGeoCoding] = useState(false);
   const [geoCodingError, setGeoCodingError] = useState(null);
   const navigate = useNavigate();
   const [lat, lng] = useUrlLocation();
+  const { createBookmark } = UseBookmarks();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!cityName || !country) return;
+    const newBookmark = {
+      cityName,
+      country,
+      countryCode,
+      latitude: lat,
+      longitude: lng,
+      host_location: cityName + "" + country,
+    };
+    await createBookmark(newBookmark);
+  };
   useEffect(() => {
     if (!lat || !lng) return;
 
@@ -27,9 +42,10 @@ function BookmarkAdd() {
           `${Base_GeoCoding_Url}?latitude=${lat}&longitude=${lng}`
         );
 
-        if(!data.countryCode)throw new Error(
-          "this place is not a country or city please click somewhere else."
-        );
+        if (!data.countryCode)
+          throw new Error(
+            "this place is not a country or city please click somewhere else."
+          );
 
         setCountry(data.countryName);
         setCityName(data.city || data.locality || "");
@@ -42,11 +58,12 @@ function BookmarkAdd() {
     }
     fetchLocationData();
   }, [lat, lng]);
-  if (isLoadingGeoCoding) return <Loading/>
+
+  if (isLoadingGeoCoding) return <Loading />;
   return (
     <div>
       <h2>Bookmark new Location :</h2>
-      <div className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <div className="formControl">
           <label htmlFor="country">Country :</label>
           <input
@@ -56,7 +73,7 @@ function BookmarkAdd() {
             name="country"
             id="country"
           />
-          <ReactCountryFlag className="flag" svg countryCode={countryCode}/>
+          <ReactCountryFlag className="flag" svg countryCode={countryCode} />
         </div>
         <div className="formControl">
           <label htmlFor="cityName">CityName :</label>
@@ -80,7 +97,7 @@ function BookmarkAdd() {
           </button>
           <button className="btn btn--primary">Add</button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
