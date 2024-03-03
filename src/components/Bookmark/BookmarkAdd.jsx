@@ -90,7 +90,7 @@ function BookmarkAdd() {
             className="btn btn--back"
             onClick={(e) => {
               e.preventDefault();
-              navigate(-1);
+              navigate("/bookmarks");
             }}
           >
             &larr; Back

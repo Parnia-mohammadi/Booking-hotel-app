@@ -12,7 +12,7 @@ function Bookmark() {
     await deleteBookmark(id);
   };
   if (isLoading) return <Loading />;
-  if (!bookmarks.length)
+  if (!isLoading && !bookmarks.length)
     return (
       <h3>
         There is no bookmark. please click somewhere on map and add it to the

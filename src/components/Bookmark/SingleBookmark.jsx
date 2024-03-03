@@ -11,7 +11,7 @@ function SingleBookmark() {
   useEffect(() => {
     getBookmark(id);
   }, [id]);
-  if (isLoading) return <Loading />;
+  if (isLoading || !currentBookmark) return <Loading />;
   return (
     <div>
       <h2>{currentBookmark.cityName}</h2>
