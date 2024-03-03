@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Loading from "./LocationList/Loading";
-import { UseHotels } from "../context/HotelsProvider";
+import { useHotels } from "../context/HotelsProvider";
 
 function Hotels() {
-  const { isLoading, hotels, currentHotel } = UseHotels();
+  const { isLoading, hotels, currentHotel } = useHotels();
   // console.log(isLoading, hotels);
   if (isLoading) <Loading />;
 

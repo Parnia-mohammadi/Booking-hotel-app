@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Map from "./Map";
-import { UseHotels } from "../context/HotelsProvider";
+import { useHotels } from "../context/HotelsProvider";
 
 function AppLayout() {
-  const { hotels } = UseHotels();
+  const { hotels } = useHotels();
   return (
     <div className="appLayout">
       <div className="sidebar">
