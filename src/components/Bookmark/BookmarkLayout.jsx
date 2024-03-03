@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Map from "../Map";
-import { UseBookmarks } from "../../context/BookmarkListContext";
+import { useBookmarks } from "../../context/BookmarkListContext";
 
 function BookmarkLayout() {
-  const { bookmarks } = UseBookmarks();
+  const { bookmarks } = useBookmarks();
   return (
     <div className="appLayout">
       <div className="sidebar">

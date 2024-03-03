@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { UseHotels } from "../context/HotelsProvider";
+import { useHotels } from "../context/HotelsProvider";
 import Loading from "./LocationList/Loading";
 import { useParams } from "react-router-dom";
 
 function SingleHotel() {
-  const { isLoadingCurrentHotel, currentHotel: data, getHotel } = UseHotels();
+  const { isLoadingCurrentHotel, currentHotel: data, getHotel } = useHotels();
   const { id } = useParams();
   useEffect(() => {
     getHotel(id);

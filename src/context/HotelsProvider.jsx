@@ -43,6 +43,6 @@ export default function HotelsProvider({ children }) {
   );
 }
 
-export function UseHotels() {
+export function useHotels() {
   return useContext(HotelContext);
 }
