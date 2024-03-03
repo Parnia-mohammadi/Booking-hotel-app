@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import { UseBookmarks } from "../../context/BookmarkListContext";
+import { useBookmarks } from "../../context/BookmarkListContext";
 import { useNavigate, useParams } from "react-router-dom";
 import Loading from "../LocationList/Loading";
 import ReactCountryFlag from "react-country-flag";
 
 function SingleBookmark() {
   const navigate = useNavigate();
-  const { currentBookmark, isLoading, getBookmark } =
-    UseBookmarks();
+  const { currentBookmark, isLoading, getBookmark } = useBookmarks();
   const { id } = useParams();
   useEffect(() => {
     getBookmark(id);
@@ -22,7 +21,12 @@ function SingleBookmark() {
         &nbsp;<strong>{currentBookmark.cityName}</strong>&nbsp;
         <span>{currentBookmark.country}</span>
       </div>
-      <button className="btn btn--back" onClick={() => {navigate(-1)}}>
+      <button
+        className="btn btn--back"
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
         &larr;Back
       </button>
     </div>

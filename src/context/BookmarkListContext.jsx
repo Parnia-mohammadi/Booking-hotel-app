@@ -73,6 +73,6 @@ export default function BookmarkListContextProvider({ children }) {
     </BookmarkListContext.Provider>
   );
 }
-export function UseBookmarks() {
+export function useBookmarks() {
   return useContext(BookmarkListContext);
 }

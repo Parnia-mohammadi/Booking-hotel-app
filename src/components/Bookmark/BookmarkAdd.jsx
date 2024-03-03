@@ -4,7 +4,7 @@ import useUrlLocation from "../../hooks/useUrlLocation";
 import axios from "axios";
 import ReactCountryFlag from "react-country-flag";
 import Loading from "../LocationList/Loading";
-import { UseBookmarks } from "../../context/BookmarkListContext";
+import { useBookmarks } from "../../context/BookmarkListContext";
 
 const Base_GeoCoding_Url =
   "https://api.bigdatacloud.net/data/reverse-geocode-client";
@@ -17,7 +17,7 @@ function BookmarkAdd() {
   const [geoCodingError, setGeoCodingError] = useState(null);
   const navigate = useNavigate();
   const [lat, lng] = useUrlLocation();
-  const { createBookmark } = UseBookmarks();
+  const { createBookmark } = useBookmarks();
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!cityName || !country) return;

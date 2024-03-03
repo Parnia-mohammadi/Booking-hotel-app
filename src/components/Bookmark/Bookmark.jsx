@@ -1,4 +1,4 @@
-import { UseBookmarks } from "../../context/BookmarkListContext";
+import { useBookmarks } from "../../context/BookmarkListContext";
 import Loading from "../LocationList/Loading";
 import { Link, useParams } from "react-router-dom";
 import ReactCountryFlag from "react-country-flag";
@@ -6,7 +6,7 @@ import { HiTrash } from "react-icons/hi";
 
 function Bookmark() {
   const { bookmarks, isLoading, currentBookmark, deleteBookmark } =
-    UseBookmarks();
+    useBookmarks();
   const handleDelete = async (e, id) => {
     e.preventDefault();
     await deleteBookmark(id);
