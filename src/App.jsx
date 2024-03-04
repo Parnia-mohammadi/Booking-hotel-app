@@ -14,27 +14,32 @@ import Bookmark from "./components/Bookmark/Bookmark";
 import BookmarkAdd from "./components/Bookmark/BookmarkAdd";
 import BookmarkListContextProvider from "./context/BookmarkListContext";
 import SingleBookmark from "./components/Bookmark/SingleBookmark";
+import AuthProvider from "./context/AuthProvider";
+import Login from "./components/Header/Login";
 
 function App() {
   return (
-    <BookmarkListContextProvider>
-      <HotelsProvider>
-        <Toaster />
-        <Header />
-        <Routes>
-          <Route path="/" element={<LocationList />} />
-          <Route path="/hotels" element={<AppLayout />}>
-            <Route index element={<Hotels />} />
-            <Route path=":id" element={<SingleHotel />} />
-          </Route>
-          <Route path="/bookmarks" element={<BookmarkLayout />}>
-            <Route index element={<Bookmark />} />
-            <Route path="add" element={<BookmarkAdd />} />
-            <Route path=":id" element={<SingleBookmark />} />
-          </Route>
-        </Routes>
-      </HotelsProvider>
-    </BookmarkListContextProvider>
+    <AuthProvider>
+      <BookmarkListContextProvider>
+        <HotelsProvider>
+          <Toaster />
+          <Header />
+          <Routes>
+            <Route path="/" element={<LocationList />} />
+            <Route path="/hotels" element={<AppLayout />}>
+              <Route index element={<Hotels />} />
+              <Route path=":id" element={<SingleHotel />} />
+            </Route>
+            <Route path="/bookmarks" element={<BookmarkLayout />}>
+              <Route index element={<Bookmark />} />
+              <Route path="add" element={<BookmarkAdd />} />
+              <Route path=":id" element={<SingleBookmark />} />
+            </Route>
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </HotelsProvider>
+      </BookmarkListContextProvider>
+    </AuthProvider>
   );
 }
 
