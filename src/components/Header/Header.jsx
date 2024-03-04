@@ -1,6 +1,12 @@
 import { useRef, useState } from "react";
 import { MdLocationOn } from "react-icons/md";
-import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
+import {
+  HiCalendar,
+  HiMinus,
+  HiPlus,
+  HiSearch,
+  HiLogout,
+} from "react-icons/hi";
 import useOutsideClick from "../../hooks/useOutsideClick";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -10,11 +16,15 @@ import {
   createSearchParams,
   useNavigate,
   useSearchParams,
+  NavLink,
 } from "react-router-dom";
+import { useAuth } from "../../context/AuthProvider";
 
 function Header() {
   const [searchParams, setSearchParams] = useSearchParams({});
-  const [destination, setDestination] = useState(searchParams.get("destination")||"");
+  const [destination, setDestination] = useState(
+    searchParams.get("destination") || ""
+  );
   const [openOption, setOpenOption] = useState(false);
   const [options, setOptions] = useState({
     adult: 1,
@@ -43,10 +53,16 @@ function Header() {
     navigate({ pathname: "/hotels", search: encodedParams.toString() });
     // setSearchParams({date:JSON.stringify(date), destination, options:JSON.stringify(options)})
   };
+  const { isAuthenicated, user, logout } = useAuth();
+  const handleLogout = () => {
+    logout();
+  };
   return (
     <div className="header">
-      Home
       <div className="headerSearch">
+        <div>
+          <NavLink to="/">Home</NavLink>
+        </div>
         <div className="headerSearchItem">
           <MdLocationOn className="headerIcon locationIcon" />
           <input
@@ -96,6 +112,12 @@ function Header() {
           <button className="headerSearchBtn" onClick={handleSearch}>
             <HiSearch className="heroIcon" />
           </button>
+        </div>
+        <div>
+          <NavLink to="/login">
+            <span>{isAuthenicated ? user.name : "Login"} </span>
+            <HiLogout onClick={handleLogout} />
+          </NavLink>
         </div>
       </div>
     </div>
