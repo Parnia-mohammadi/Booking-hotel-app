@@ -33,7 +33,14 @@ function App() {
             </Route>
             <Route path="/bookmarks" element={<BookmarkLayout />}>
               <Route index element={<Bookmark />} />
-              <Route path="add" element={<ProtectedRoute><BookmarkAdd /></ProtectedRoute>} />
+              <Route
+                path="add"
+                element={
+                  <ProtectedRoute>
+                    <BookmarkAdd />
+                  </ProtectedRoute>
+                }
+              />
               <Route path=":id" element={<SingleBookmark />} />
             </Route>
             <Route path="/login" element={<Login />} />

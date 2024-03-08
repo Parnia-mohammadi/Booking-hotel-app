@@ -3,12 +3,12 @@ import useFetch from "../../hooks/useFetch";
 import Loading from "./Loading";
 
 function LocationList() {
-  const { isLoading, data } = useFetch("http://localhost:5000/hotels",'');
+  const { isLoading, data } = useFetch("http://localhost:5000/hotels", "");
   if (isLoading) return <Loading />;
   return (
     <div className="nearbyLocation">
       <p>nearby Locations</p>
-      <br/>
+      <br />
       <div className="locationList">
         {data.map((item) => {
           return (

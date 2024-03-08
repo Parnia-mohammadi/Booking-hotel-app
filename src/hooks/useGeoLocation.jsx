@@ -6,7 +6,8 @@ export default function useGeoLocation() {
   const [error, setError] = useState(null);
   function getPosition() {
     setIsLoading(true);
-    if (!navigator.geolocation) return setError("Your browser does'nt support geolocation");
+    if (!navigator.geolocation)
+      return setError("Your browser does'nt support geolocation");
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setPosition({ lat: pos.coords.latitude, lng: pos.coords.longitude });

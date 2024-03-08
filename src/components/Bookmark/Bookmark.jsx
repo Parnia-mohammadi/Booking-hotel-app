@@ -1,6 +1,6 @@
 import { useBookmarks } from "../../context/BookmarkListContext";
 import Loading from "../LocationList/Loading";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReactCountryFlag from "react-country-flag";
 import { HiTrash } from "react-icons/hi";
 

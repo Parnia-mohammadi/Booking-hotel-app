@@ -11,8 +11,9 @@ function Login() {
     e.preventDefault();
     if (email && password) login({ email, password });
   };
-  useEffect(()=>{
-    if(isAuthenicated) navigate("/", {replace:true})},[isAuthenicated, navigate]);
+  useEffect(() => {
+    if (isAuthenicated) navigate("/", { replace: true });
+  }, [isAuthenicated, navigate]);
   return (
     <div className="loginContainer">
       <h2>Login :</h2>
